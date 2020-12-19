@@ -16,8 +16,10 @@
       "browser": true
   },
   "rules": {
+    "react/jsx-uses-vars": "error",
+    "react/jsx-uses-react": "error",
     "prefer-const": "error",
-    "no-var": "error",
+    "no-var": "error", 
     "semi": [
       "error",
       "never"

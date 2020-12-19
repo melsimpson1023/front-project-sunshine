@@ -1,17 +1,31 @@
 @import '~bootstrap/scss/bootstrap';
 
+
 html {
-  background: url(/images/shutterstock_1101884330.jpg) no-repeat center center fixed;
+  background-image: url(/images/shutterstock_1101884330.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
 }
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/playfairdisplay/v21/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDTbtXK-F2qC0usEw.woff) format('woff');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+h1 {
+   font-size: 600%; // makes font bigger on 50%
+   font-family: 'PlayfairDisplay-Regular';
+   src: local('PlayfairDisplay-Regular'), url(./fonts/PlayfairDisplay-Regular.ttf) format('truetype');
+}
+h2{
+  font-size: 300%;
+  font-family: 'PlayfairDisplay-Regular';
+  src: local('PlayfairDisplay-Regular'), url(./fonts/PlayfairDisplay-Regular.ttf) format('truetype');
+}
+h3{
+  font-family: 'PlayfairDisplay-Regular';
+  src: local('PlayfairDisplay-Regular'), url(./fonts/PlayfairDisplay-Regular.ttf) format('truetype');
+}
+h5{
+  font-family: 'PlayfairDisplay-Regular';
+  src: local('PlayfairDisplay-Regular'), url(./fonts/PlayfairDisplay-Regular.ttf) format('truetype');
+}
+h4{
+  font-family: 'PlayfairDisplay-Regular';
+  src: local('PlayfairDisplay-Regular'), url(./fonts/PlayfairDisplay-Regular.ttf) format('truetype');
 }
