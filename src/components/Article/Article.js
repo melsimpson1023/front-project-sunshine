@@ -4,9 +4,9 @@ import '../../index.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
 // import YouTubePlayer from 'react-player/lib/players/YouTube'
 
-const Video = () => {
+const Article = () => {
   const backgroundImageUrl = ('/images/shutterstock_1101884330.jpg')
-  const videoStyles = {
+  const articleStyles = {
     // Center the heading inside the container
     display: 'flex',
     justifyContent: 'center',
@@ -23,12 +23,9 @@ const Video = () => {
     textAlign: 'center'
   }
   return (
-    <div style={videoStyles}>
+    <div style={articleStyles}>
       <div>
         <h1><b>Lux</b></h1>
-        <iframe width="420" height="315"
-          src="https://www.youtube.com/watch?v=TBuIGBCF9jc">
-        </iframe>
         <h2>Welcome to a New World of Possiblities</h2>
         <p></p>
         <h3>We hope you enjoy your journey to the light that shines within ALL of us. May this portal help you to become a better YOU.</h3>
@@ -38,4 +35,4 @@ const Video = () => {
     </div>
   )
 }
-export default Video
+export default Article
