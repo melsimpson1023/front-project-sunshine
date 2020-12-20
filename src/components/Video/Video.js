@@ -26,9 +26,6 @@ const Video = () => {
     <div style={videoStyles}>
       <div>
         <h1><b>Lux</b></h1>
-        <iframe width="420" height="315"
-          src="https://www.youtube.com/watch?v=TBuIGBCF9jc">
-        </iframe>
         <h2>Welcome to a New World of Possiblities</h2>
         <p></p>
         <h3>We hope you enjoy your journey to the light that shines within ALL of us. May this portal help you to become a better YOU.</h3>

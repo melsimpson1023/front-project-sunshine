@@ -30,8 +30,10 @@ const About = () => {
         <h5>We are here to promote positivity and motivation for ALL.</h5>
         <h5>Because we have experienced, in the past, depression and/or other stress related issues, it made us think, how can we help others with the same issues? This is how we came up with the idea to create this portal in hopes of helping others see the brighter side of life.</h5>
         <h5>We have learned from our experiences that it is important to find happiness within the small things in life. For example, the Sun is out and is such a beautiful day. By appreciating the small, it makes the bigger things in life way more extraordinary.</h5>
-        <h5>We have a challenge for you. Yes you! When you wake up tomorrow, think of three things in life that you are greatful for. Do this for 30 days. It gets easier and more beneficial as time goes by.</h5>
+        <h5>We have a challenge for you. Yes YOU! When you wake up tomorrow, think of three things in life that you are greatful for. Do this for 30 days. It gets easier and more beneficial as time goes by.</h5>
         <h5>Please remember, we are not the teachers. This is a portal we created containing videos, articles, and a blog. We believe in you and also know that you hopefully will be able to find your OWN answers.</h5>
+        <p></p>
+        <h4>Please remember, YOU have control of your own destiny.</h4>
       </div>
     </div>
   )
