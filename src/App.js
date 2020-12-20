@@ -11,6 +11,7 @@ import SignOut from './components/SignOut/SignOut'
 import ChangePassword from './components/ChangePassword/ChangePassword'
 import Home from './components/Home/Home'
 import About from './components/About/About'
+import Video from './components/Video/Video'
 
 class App extends Component {
   constructor () {
@@ -55,6 +56,9 @@ class App extends Component {
           />
         ))}
         <main className="container">
+          <Route exact path='/' render={() => (
+            <Home msgAlert={this.msgAlert} setUser={this.setUser} />
+          )} />
           <Route path='/home' render={() => (
             <Home msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
@@ -72,6 +76,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/video' render={() => (
+            <Video msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>

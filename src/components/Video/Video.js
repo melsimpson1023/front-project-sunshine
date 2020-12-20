@@ -1,10 +1,12 @@
 import React from 'react'
+// import ReactPlayer from 'react-player'
 import '../../index.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
+// import YouTubePlayer from 'react-player/lib/players/YouTube'
 
-const Home = () => {
+const Video = () => {
   const backgroundImageUrl = ('/images/shutterstock_1101884330.jpg')
-  const homeStyles = {
+  const videoStyles = {
     // Center the heading inside the container
     display: 'flex',
     justifyContent: 'center',
@@ -21,7 +23,7 @@ const Home = () => {
     textAlign: 'center'
   }
   return (
-    <div style={homeStyles}>
+    <div style={videoStyles}>
       <div>
         <h1><b>Lux</b></h1>
         <h2>Welcome to a New World of Possiblities</h2>
@@ -33,4 +35,4 @@ const Home = () => {
     </div>
   )
 }
-export default Home
+export default Video

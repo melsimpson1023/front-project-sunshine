@@ -1,4 +1,6 @@
 import React from 'react'
+import '../../index.scss'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const About = () => {
   const backgroundImageUrl = ('/images/shutterstock_1101884330.jpg')
@@ -21,7 +23,7 @@ const About = () => {
   return (
     <div style={aboutStyles}>
       <div>
-        <h1>Lux</h1>
+        <h1><b>Lux</b></h1>
         <h2>Welcome to a New World of Possiblities</h2>
         <h4><i>A pessimist sees the difficulty in every opportunity; an optimist sees the opportunity in every difficulty. -Winston Churchill</i></h4>
         <h3>About Us</h3>

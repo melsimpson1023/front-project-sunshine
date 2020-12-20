@@ -2,15 +2,15 @@
 
 
 html {
-  background-image: url(/images/shutterstock_1101884330.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-image: url('/images/shutterstock_1101884330.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 h1 {
-   font-size: 600%; // makes font bigger on 50%
-   font-family: 'PlayfairDisplay-Regular';
-   src: local('PlayfairDisplay-Regular'), url(./fonts/PlayfairDisplay-Regular.ttf) format('truetype');
+   font-size: 600%;
+   font-family: 'PlayfairDisplay-Bold';
+   src: local('PlayfairDisplay-Bold'), url(./fonts/PlayfairDisplay-Bold.ttf) format('truetype');
 }
 h2{
   font-size: 300%;
