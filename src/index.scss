@@ -6,6 +6,8 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  font-family: 'PlayfairDisplay-Regular';
+  src: local('PlayfairDisplay-Regular'), url(./fonts/PlayfairDisplay-Regular.ttf) format('truetype');
 }
 h1 {
    font-size: 600%;

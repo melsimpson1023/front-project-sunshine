@@ -14,6 +14,7 @@ import About from './components/About/About'
 import Video from './components/Video/Video'
 import Article from './components/Article/Article'
 import Blog from './components/Blog/Blog'
+import BlogCreate from './components/BlogCreate/BlogCreate'
 
 class App extends Component {
   constructor () {
@@ -57,6 +58,7 @@ class App extends Component {
             deleteAlert={this.deleteAlert}
           />
         ))}
+
         <main className="container">
           <Route exact path='/' render={() => (
             <Home msgAlert={this.msgAlert} setUser={this.setUser} />
@@ -76,11 +78,14 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/sign-out' render={() => (
             <SignOut msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
           )} />
+          <AuthenticatedRoute user={user} path='/change-password' render={() => (
+            <ChangePassword msgAlert={this.msgAlert} user={user} />
+          )} />
           <AuthenticatedRoute user={user} path='/blog' render={() => (
             <Blog msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/change-password' render={() => (
-            <ChangePassword msgAlert={this.msgAlert} user={user} />
+          <AuthenticatedRoute user={user} path='/blogcreate' render={() => (
+            <BlogCreate msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/video' render={() => (
             <Video msgAlert={this.msgAlert} user={user} />
