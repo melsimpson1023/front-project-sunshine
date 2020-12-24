@@ -14,7 +14,7 @@ import About from './components/About/About'
 import Video from './components/Video/Video'
 import Article from './components/Article/Article'
 import Blog from './components/Blog/Blog'
-import BlogCreate from './components/BlogCreate/BlogCreate'
+import BlogCreate from './components/Blog/BlogCreate'
 
 class App extends Component {
   constructor () {

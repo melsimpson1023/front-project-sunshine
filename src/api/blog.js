@@ -1,41 +1,27 @@
 import apiUrl from '../apiConfig'
 import axios from 'axios'
 
-export const blogCreate = blog => {
+export const blogCreate = (blog, user) => {
   return axios({
     method: 'POST',
-    url: apiUrl + '/create/',
-    data: {
-      blog: {
-        blogtitle: blog.blogtitle,
-        description: blog.description,
-        date: blog.date,
-        author: blog.author,
-        blogtext: blog.blogtext
-      }
-    }
+    url: apiUrl + '/blog/',
+    headers: {
+      Authorization: `Bearer ${user.token}`
+    },
+    data: blog
   })
 }
 
-export const blogIndex = blog => {
+export const blogIndex = () => {
   return axios({
-    url: apiUrl + '/index/',
-    method: 'GET',
-    data: {
-      blog: {
-        blogtitle: blog.blogtitle,
-        description: blog.description,
-        date: blog.date,
-        author: blog.author,
-        blogtext: blog.blogtext
-      }
-    }
+    url: apiUrl + '/blog/',
+    method: 'GET'
   })
 }
 
 export const blogShow = (blog, user) => {
   return axios({
-    url: apiUrl + '/show/',
+    url: apiUrl + '/blog/<int:pk>/',
     method: 'GET',
     headers: {
       'Authorization': `Token ${user.token}`
@@ -43,7 +29,7 @@ export const blogShow = (blog, user) => {
     data: {
       blog: {
         blogtitle: blog.blogtitle,
-        description: blog.description,
+        blogsubject: blog.blogsubject,
         date: blog.date,
         author: blog.author,
         blogtext: blog.blogtext
@@ -52,9 +38,9 @@ export const blogShow = (blog, user) => {
   })
 }
 
-export const blogDelete = user => {
+export const blogDelete = (blog, user) => {
   return axios({
-    url: apiUrl + '/delete/',
+    url: apiUrl + '/blog/<int:pk>/',
     method: 'DELETE',
     headers: {
       'Authorization': `Token ${user.token}`
@@ -64,7 +50,7 @@ export const blogDelete = user => {
 
 export const blogUpdate = (blog, user) => {
   return axios({
-    url: apiUrl + '/update/',
+    url: apiUrl + '/blog/<int:pk>/',
     method: 'PATCH',
     headers: {
       'Authorization': `Token ${user.token}`
@@ -72,7 +58,7 @@ export const blogUpdate = (blog, user) => {
     data: {
       blog: {
         blogtitle: blog.blogtitle,
-        description: blog.description,
+        blogsubject: blog.blogsubject,
         date: blog.date,
         author: blog.author,
         blogtext: blog.blogtext
