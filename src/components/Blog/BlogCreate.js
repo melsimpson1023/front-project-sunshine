@@ -14,7 +14,6 @@ class BlogCreate extends Component {
         blogtitle: '',
         blogsubject: '',
         date: '',
-        author: '',
         blogtext: ''
       },
       createdId: null
@@ -114,17 +113,6 @@ render () {
               value={this.state.blog.date}
               type="date"
               placeholder="Todays Date"
-              onChange={this.handleChange}
-            />
-          </Form.Group>
-          <Form.Group controlId="author">
-            <Form.Label>Author</Form.Label>
-            <Form.Control
-              required
-              name="author"
-              value={this.state.blog.author}
-              type="author"
-              placeholder="Your Name"
               onChange={this.handleChange}
             />
             <Form.Group controlId="blogtext">
