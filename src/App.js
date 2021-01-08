@@ -84,7 +84,7 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/blog' render={() => (
             <Blog msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/blogcreate' render={() => (
+          <AuthenticatedRoute user={user} path='/blog-create' render={() => (
             <BlogCreate msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/video' render={() => (

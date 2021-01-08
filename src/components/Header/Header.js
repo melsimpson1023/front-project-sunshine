@@ -1,14 +1,19 @@
 import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import NavDropdown from 'react-bootstrap/NavDropdown'
 
 const authenticatedOptions = (
   <Fragment>
-    <Nav.Link href="#blog">Blog</Nav.Link>
-    <Nav.Link href="#blogcreate">Create Blog</Nav.Link>
+    <NavDropdown title="Blogs" class="collapsible-nav-dropdown">
+      <NavDropdown.Item href="#blogs">View Blogs</NavDropdown.Item>
+      <NavDropdown.Item href="#blog-create">Create a Blog</NavDropdown.Item>
+    </NavDropdown>
     <Nav.Link href="#video">Videos</Nav.Link>
     <Nav.Link href="#article">Articles</Nav.Link>
-    <Nav.Link href="#change-password">Change Password</Nav.Link>
+    <NavDropdown title="Settings" class="collapsible-nav-dropdown">
+      <NavDropdown.Item href="#change-password">Change Password</NavDropdown.Item>
+    </NavDropdown>
     <Nav.Link href="#sign-out">Sign Out</Nav.Link>
   </Fragment>
 )
