@@ -5,13 +5,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 
 const authenticatedOptions = (
   <Fragment>
-    <NavDropdown title="Blogs" class="collapsible-nav-dropdown">
-      <NavDropdown.Item href="#blogs">View Blogs</NavDropdown.Item>
+    <NavDropdown title="Blogs" className="collapsible-nav-dropdown">
+      <NavDropdown.Item href="#blog">View Blogs</NavDropdown.Item>
       <NavDropdown.Item href="#blog-create">Create a Blog</NavDropdown.Item>
     </NavDropdown>
     <Nav.Link href="#video">Videos</Nav.Link>
     <Nav.Link href="#article">Articles</Nav.Link>
-    <NavDropdown title="Settings" class="collapsible-nav-dropdown">
+    <NavDropdown title="Settings" className="collapsible-nav-dropdown">
       <NavDropdown.Item href="#change-password">Change Password</NavDropdown.Item>
     </NavDropdown>
     <Nav.Link href="#sign-out">Sign Out</Nav.Link>
