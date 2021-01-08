@@ -60,7 +60,6 @@ export const blogUpdate = (blog, user) => {
         blogtitle: blog.blogtitle,
         blogsubject: blog.blogsubject,
         date: blog.date,
-        author: blog.author,
         blogtext: blog.blogtext
       }
     }
