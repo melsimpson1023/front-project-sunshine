@@ -1,124 +1,126 @@
 import React, { Component } from 'react'
-import messages from '../AutoDismissAlert/messages'
-import { Redirect } from 'react-router-dom'
-
-import { blogCreate } from '../../api/blog'
+// import messages from '../AutoDismissAlert/messages'
+import { createBlog } from '../../api/blogs'
+import { withRouter } from 'react-router-dom'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 class BlogCreate extends Component {
-  constructor (props) {
-    super(props)
+  constructor () {
+    super()
     this.state = {
       blog: {
         blogtitle: '',
         blogsubject: '',
         date: '',
         blogtext: ''
-      },
-      createdBlogId: []
+      }
     }
   }
 
   // Update the state for each input
   // So the `value` of the input updates
   // and we can we see what we type
+  // handleChange = event => {
+  //  event.persist()
+
+  //  this.setState(preState => {
+  //    const updatedField = { [event.target.name]: event.target.value }
+
+  //    const editedBlog = Object.assign(this.state.blog, updatedField)
+
+  //    return { blog: editedBlog }
+  //  })
   handleChange = event => {
-    event.persist()
+    const updatedField = { [event.target.name]: event.target.value }
 
-    this.setState(preState => {
-      const updatedField = { [event.target.name]: event.target.value }
+    const editedBlog = Object.assign(this.state.blog, updatedField)
 
-      const editedBlog = Object.assign(this.state.blog, updatedField)
-
-      return { blog: editedBlog }
-    })
-  }
-  onBlogCreate = event => {
-    event.preventDefault()
-
-    const { msgAlert, user } = this.props
-
-    blogCreate(this.state, user)
-      .then(() => msgAlert({
-        heading: 'Blog Created Successfully',
-        message: messages.onBlogCreateSuccess,
-        variant: 'success'
-      }))
-      .catch(error => msgAlert({
-        heading: 'Create blog failed with error: ' + error.message,
-        message: messages.onBlogCreateFailure,
-        variant: 'danger'
-      }))
+    this.setState({ blog: editedBlog })
   }
 
   handleSubmit = event => {
     event.preventDefault()
+
+    const { user, msgAlert } = this.props
+
+    createBlog(this.state.blog, user)
+      .then(() => {
+        msgAlert({
+          heading: 'Blog Create Success',
+          message: 'Blog Create Success',
+          variant: 'success'
+        })
+      })
+      .then(() => this.props.history.push('/blog'))
+      .catch(err => {
+        msgAlert({
+          heading: 'Blog Create Failed',
+          message: `Failed with error: ${err.message}`,
+          variant: 'danger'
+        })
+      })
   }
 
   render () {
-    const { handleChange, handleSubmit } = this
-    const { createdBlogId, blog } = this.state
+    // const { handleChange, handleSubmit } = this
+    // const { createdBlogId, blog } = this.state
 
-    if (createdBlogId) {
-      return <Redirect to={`/blog/${createdBlogId}`} />
-    }
+    // if (createdBlogId) {
+    //  return <Redirect to={`/blog/${createdBlogId}`} />
+    //  }
     return (
       <div className="row">
         <div className="col-sm-10 col-md-8 mx-auto mt-5">
           <h3>Create Blog</h3>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="blogtitle">
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Group>
               <Form.Label>Blog Title</Form.Label>
               <Form.Control
-                required
-                type="blogtitle"
+                type="text"
                 name="blogtitle"
-                value={blog.title}
+                value={this.state.blog.blogtitle}
                 placeholder="Enter Title"
-                onChange={handleChange}
+                onChange={this.handleChange}
               />
             </Form.Group>
-            <Form.Group controlId="blogsubject">
+            <Form.Group>
               <Form.Label>Subject of Blog</Form.Label>
               <Form.Control
                 required
                 name="blogsubject"
-                value={blog.blogsubject}
-                type="blogsubject"
+                value={this.state.blog.blogsubject}
+                type="text"
                 placeholder="Subject of Blog"
-                onChange={handleChange}
+                onChange={this.handleChange}
               />
             </Form.Group>
 
-            <Form.Group controlId="date">
+            <Form.Group>
               <Form.Label>Date</Form.Label>
               <Form.Control
                 required
                 name="date"
-                value={blog.date}
+                value={this.state.blog.date}
                 type="date"
                 placeholder="Todays Date"
-                onChange={handleChange}
+                onChange={this.handleChange}
               />
-              <Form.Group controlId="blogtext">
+              <Form.Group>
                 <Form.Label>Blog Text</Form.Label>
                 <Form.Control
                   required
                   name="blogtext"
-                  value={blog.blogtext}
+                  value={this.state.blog.blogtext}
                   type="blogtext"
                   placeholder="Type Your Thoughts Here"
-                  onChange={handleChange}
+                  onChange={this.handleChange}
+                  as="textarea"
+                  rows={3}
                 />
               </Form.Group>
-              <Button
-                variant="primary"
-                type="submit"
-              >
-              Submit
-              </Button>
+              <Button type="submit"> Submit</Button>
             </Form.Group>
           </Form>
         </div>
@@ -127,4 +129,4 @@ class BlogCreate extends Component {
   }
 }
 
-export default BlogCreate
+export default withRouter(BlogCreate)

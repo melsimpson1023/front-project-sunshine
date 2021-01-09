@@ -15,6 +15,10 @@ import Video from './components/Video/Video'
 import Article from './components/Article/Article'
 import Blog from './components/Blog/Blog'
 import BlogCreate from './components/Blog/BlogCreate'
+import BlogShow from './components/Blog/BlogShow'
+import BlogIndex from './components/Blog/BlogIndex'
+import BlogUpdate from './components/Blog/BlogUpdate'
+import BlogDelete from './components/Blog/BlogDelete'
 
 class App extends Component {
   constructor () {
@@ -83,10 +87,22 @@ class App extends Component {
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/blog' render={() => (
-            <Blog msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
+            <Blog msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/blog-create' render={() => (
-            <BlogCreate msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
+          <AuthenticatedRoute user={user} path='/blogcreate' render={() => (
+            <BlogCreate msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/blog-show/:blogId' render={() => (
+            <BlogShow msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/blog-index' render={() => (
+            <BlogIndex msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/blog-update/:blogId' render={() => (
+            <Fragment>
+              <BlogUpdate msgAlert={this.msgAlert} user={user} />
+              <BlogDelete msgAlert={this.msgAlert} user={user} />
+            </Fragment>
           )} />
           <AuthenticatedRoute user={user} path='/video' render={() => (
             <Video msgAlert={this.msgAlert} user={user} />
