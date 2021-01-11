@@ -15,11 +15,11 @@ class BlogShow extends Component {
 
   componentDidMount () {
     const { user, msgAlert, match } = this.props
-    console.log(match)
+    // console.log(match)
 
     blogShow(match.params.blogId, user)
       .then(res => {
-        console.log(res)
+        // console.log(res)
         this.setState({ blog: res.data.blog })
       })
       .then(() => {
@@ -39,7 +39,7 @@ class BlogShow extends Component {
   }
   delete = () => {
     const { user, match } = this.props
-    console.log(match.params)
+    // console.log(match.params)
     blogDelete(match.params.blogId, user)
       .then(() => this.setState({
         deleted: true
@@ -56,7 +56,7 @@ class BlogShow extends Component {
     } else if (this.state.deleted) {
       return <Redirect to="/blog-index" />
     } else {
-      console.log(this.state.blog, user)
+      // console.log(this.state.blog, user)
       if (this.state.blog.owner === user._id) {
         return (
           <div>

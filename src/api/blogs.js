@@ -31,7 +31,7 @@ export const blogIndex = () => {
 // GET Blog
 // Show a single blog
 export const blogShow = (blogId, user) => {
-  console.log(blogId, user)
+  // console.log(blogId, user)
   return axios({
     url: `${apiUrl}/blogs/${blogId}`,
     method: 'GET',
@@ -56,7 +56,7 @@ export const blogDelete = (blogId, user) => {
 // UPDATE Blog
 // Updates a single blog
 export const blogUpdate = (blog, blogId, user) => {
-  console.log(blog)
+  // console.log(blog)
   return axios({
     url: `${apiUrl}/blogs/${blogId}`,
     method: 'PATCH',
