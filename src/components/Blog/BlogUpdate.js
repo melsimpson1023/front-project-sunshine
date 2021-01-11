@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import messages from '../AutoDismissAlert/messages'
 import { blogUpdate } from '../../api/blogs'
-import { withRouter } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
@@ -101,7 +101,7 @@ class BlogUpdate extends Component {
                   rows={3}
                 />
               </Form.Group>
-              <Button type="submit"> Submit</Button>
+              <Link to='/blog-index' type="submit" className='btn btn-primary'> Submit</Link>
             </Form.Group>
           </Form>
         </div>
