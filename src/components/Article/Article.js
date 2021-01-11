@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // import YouTubePlayer from 'react-player/lib/players/YouTube'
 
 const Article = () => {
-  const backgroundImageUrl = ('../images/shutterstock_1101884330.jpg')
+  const backgroundImageUrl = ('./public/images/shutterstock_1101884330.jpg')
   const articleStyles = {
     // Center the heading inside the container
     display: 'flex',
