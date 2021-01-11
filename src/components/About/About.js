@@ -3,14 +3,14 @@ import '../../index.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const About = () => {
-  const backgroundImageUrl = ('../../public/images/shutterstock_1101884330.jpg')
+  // const backgroundImageUrl = ('../../public/images/shutterstock_1101884330.jpg')
   const aboutStyles = {
     // Center the heading inside the container
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     // set the background image
-    backgroundImage: `url(${backgroundImageUrl})`,
+    //  backgroundImage: `url(${backgroundImageUrl})`,
     // cover the entire width of the div
     backgroundSize: 'cover',
     // center the background
