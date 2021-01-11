@@ -3,7 +3,7 @@ import '../../index.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const About = () => {
-  const backgroundImageUrl = ('/images/shutterstock_1101884330.jpg')
+  const backgroundImageUrl = ('../images/shutterstock_1101884330.jpg')
   const aboutStyles = {
     // Center the heading inside the container
     display: 'flex',
