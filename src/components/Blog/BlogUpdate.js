@@ -4,7 +4,7 @@ import { blogUpdate } from '../../api/blogs'
 import { Link, withRouter } from 'react-router-dom'
 
 import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 
 class BlogUpdate extends Component {
   constructor () {
