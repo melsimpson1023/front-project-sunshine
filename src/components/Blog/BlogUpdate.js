@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import messages from '../AutoDismissAlert/messages'
 import { Button } from 'react-bootstrap'
 import { blogUpdate } from '../../api/blogs'
-import { Redirect, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 import Form from 'react-bootstrap/Form'
 // import Button from 'react-bootstrap/Button'
@@ -15,8 +15,7 @@ class BlogUpdate extends Component {
         title: '',
         subject: '',
         date: '',
-        text: '',
-        updated: false
+        text: ''
       }
     }
   }
@@ -51,79 +50,64 @@ class BlogUpdate extends Component {
         })
       })
   }
-  update = () => {
-    const { user, match } = this.props
-    // console.log(match.params)
-    blogUpdate(match.params.blogId, user)
-      .then(() => this.setState({
-        updated: true
-      }))
-      .catch(console.error)
-  }
-  render () {
-    const { user } = this.props
-    if (this.state.updated) {
-      return <Redirect to="/blog-index" />
-    } else {
-      if (this.state.blog.owner === user._id) {
-        return (
-          <div className="row">
-            <div className="col-sm-10 col-md-8 mx-auto mt-5">
-              <h3>Edit Blog</h3>
-              <Form onSubmit={this.handleSubmit}>
-                <Form.Group>
-                  <Form.Label>Blog Title</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="title"
-                    value={this.state.blog.title}
-                    placeholder="Enter Title"
-                    onChange={this.handleChange}
-                  />
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Subject of Blog</Form.Label>
-                  <Form.Control
-                    required
-                    name="subject"
-                    value={this.state.blog.subject}
-                    type="text"
-                    placeholder="Subject of Blog"
-                    onChange={this.handleChange}
-                  />
-                </Form.Group>
 
-                <Form.Group>
-                  <Form.Label>Date</Form.Label>
-                  <Form.Control
-                    required
-                    name="date"
-                    value={this.state.blog.date}
-                    type="date"
-                    placeholder="Todays Date"
-                    onChange={this.handleChange}
-                  />
-                  <Form.Group>
-                    <Form.Label>Blog Text</Form.Label>
-                    <Form.Control
-                      required
-                      name="text"
-                      value={this.state.blog.text}
-                      type="blogtext"
-                      placeholder="Type Your Thoughts Here"
-                      onChange={this.handleChange}
-                      as="textarea"
-                      rows={3}
-                    />
-                  </Form.Group>
-                  <Button onClick={this.update}>Update</Button>
-                </Form.Group>
-              </Form>
-            </div>
-          </div>
-        )
-      }
-    }
+  render () {
+    return (
+      <div className="row">
+        <div className="col-sm-10 col-md-8 mx-auto mt-5">
+          <h3>Edit Blog</h3>
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Group>
+              <Form.Label>Blog Title</Form.Label>
+              <Form.Control
+                type="text"
+                name="title"
+                value={this.state.blog.title}
+                placeholder="Enter Title"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Subject of Blog</Form.Label>
+              <Form.Control
+                required
+                name="subject"
+                value={this.state.blog.subject}
+                type="text"
+                placeholder="Subject of Blog"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+
+            <Form.Group>
+              <Form.Label>Date</Form.Label>
+              <Form.Control
+                required
+                name="date"
+                value={this.state.blog.date}
+                type="date"
+                placeholder="Todays Date"
+                onChange={this.handleChange}
+              />
+              <Form.Group>
+                <Form.Label>Blog Text</Form.Label>
+                <Form.Control
+                  required
+                  name="text"
+                  value={this.state.blog.text}
+                  type="blogtext"
+                  placeholder="Type Your Thoughts Here"
+                  onChange={this.handleChange}
+                  as="textarea"
+                  rows={3}
+                />
+              </Form.Group>
+              <Button type="submit"> Submit</Button>
+            </Form.Group>
+          </Form>
+        </div>
+      </div>
+    )
   }
 }
 
