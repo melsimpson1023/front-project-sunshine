@@ -5,7 +5,10 @@ html {
   background-image: url('/images/shutterstock_1101884330.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  // background-size: cover;
   background-size: cover;
+  background-position-X: 0vw;
+  background-position-Y: 15vh;
   font-family: 'PlayfairDisplay-Regular';
   src: local('PlayfairDisplay-Regular'), url(./fonts/PlayfairDisplay-Regular.ttf) format('truetype');
 }
@@ -31,3 +34,6 @@ h4{
   font-family: 'PlayfairDisplay-Regular';
   src: local('PlayfairDisplay-Regular'), url(./fonts/PlayfairDisplay-Regular.ttf) format('truetype');
 }
+// body{
+//   background-image: url('/images/shutterstock_1101884330.jpg');
+// }

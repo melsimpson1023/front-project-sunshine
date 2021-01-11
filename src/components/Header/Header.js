@@ -8,7 +8,6 @@ const authenticatedOptions = (
     <NavDropdown title="Blogs" className="collapsible-nav-dropdown">
       <NavDropdown.Item href="#blog-index">View Blogs</NavDropdown.Item>
       <NavDropdown.Item href="#blogcreate">Create a Blog</NavDropdown.Item>
-      <NavDropdown.Item href="#blog-show">View Your Blogs</NavDropdown.Item>
     </NavDropdown>
     <Nav.Link href="#video">Videos</Nav.Link>
     <Nav.Link href="#article">Articles</Nav.Link>
