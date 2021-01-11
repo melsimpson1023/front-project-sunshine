@@ -11,27 +11,14 @@ class BlogCreate extends Component {
     super()
     this.state = {
       blog: {
-        blogtitle: '',
-        blogsubject: '',
+        title: '',
+        subject: '',
         date: '',
-        blogtext: ''
+        text: ''
       }
     }
   }
 
-  // Update the state for each input
-  // So the `value` of the input updates
-  // and we can we see what we type
-  // handleChange = event => {
-  //  event.persist()
-
-  //  this.setState(preState => {
-  //    const updatedField = { [event.target.name]: event.target.value }
-
-  //    const editedBlog = Object.assign(this.state.blog, updatedField)
-
-  //    return { blog: editedBlog }
-  //  })
   handleChange = event => {
     const updatedField = { [event.target.name]: event.target.value }
 
@@ -64,12 +51,6 @@ class BlogCreate extends Component {
   }
 
   render () {
-    // const { handleChange, handleSubmit } = this
-    // const { createdBlogId, blog } = this.state
-
-    // if (createdBlogId) {
-    //  return <Redirect to={`/blog/${createdBlogId}`} />
-    //  }
     return (
       <div className="row">
         <div className="col-sm-10 col-md-8 mx-auto mt-5">
@@ -79,8 +60,8 @@ class BlogCreate extends Component {
               <Form.Label>Blog Title</Form.Label>
               <Form.Control
                 type="text"
-                name="blogtitle"
-                value={this.state.blog.blogtitle}
+                name="title"
+                value={this.state.blog.title}
                 placeholder="Enter Title"
                 onChange={this.handleChange}
               />
@@ -89,8 +70,8 @@ class BlogCreate extends Component {
               <Form.Label>Subject of Blog</Form.Label>
               <Form.Control
                 required
-                name="blogsubject"
-                value={this.state.blog.blogsubject}
+                name="subject"
+                value={this.state.blog.subject}
                 type="text"
                 placeholder="Subject of Blog"
                 onChange={this.handleChange}
@@ -111,8 +92,8 @@ class BlogCreate extends Component {
                 <Form.Label>Blog Text</Form.Label>
                 <Form.Control
                   required
-                  name="blogtext"
-                  value={this.state.blog.blogtext}
+                  name="text"
+                  value={this.state.blog.text}
                   type="blogtext"
                   placeholder="Type Your Thoughts Here"
                   onChange={this.handleChange}

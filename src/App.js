@@ -18,7 +18,7 @@ import BlogCreate from './components/Blog/BlogCreate'
 import BlogShow from './components/Blog/BlogShow'
 import BlogIndex from './components/Blog/BlogIndex'
 import BlogUpdate from './components/Blog/BlogUpdate'
-import BlogDelete from './components/Blog/BlogDelete'
+// import BlogDelete from './components/Blog/BlogDelete'
 
 class App extends Component {
   constructor () {
@@ -92,17 +92,19 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/blogcreate' render={() => (
             <BlogCreate msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/blog-show/:blogId' render={() => (
-            <BlogShow msgAlert={this.msgAlert} user={user} />
+          <AuthenticatedRoute user={user} path='/blog-update/:blogId' render={({ match }) => (
+            <BlogUpdate msgAlert={this.msgAlert} user={user} match={match} />
+          )} />
+          <AuthenticatedRoute user={user} path='/blog-show/:blogId' render={({ match }) => (
+            <Fragment>
+              <BlogShow msgAlert={this.msgAlert} user={user} match={match} />
+              {/*  <BlogUpdate msgAlert={this.msgAlert} user={user} />
+              <BlogDelete msgAlert={this.msgAlert} user={user} /> */}
+            </Fragment>
+
           )} />
           <AuthenticatedRoute user={user} path='/blog-index' render={() => (
             <BlogIndex msgAlert={this.msgAlert} user={user} />
-          )} />
-          <AuthenticatedRoute user={user} path='/blog-update/:blogId' render={() => (
-            <Fragment>
-              <BlogUpdate msgAlert={this.msgAlert} user={user} />
-              <BlogDelete msgAlert={this.msgAlert} user={user} />
-            </Fragment>
           )} />
           <AuthenticatedRoute user={user} path='/video' render={() => (
             <Video msgAlert={this.msgAlert} user={user} />

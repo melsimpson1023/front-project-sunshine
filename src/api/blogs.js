@@ -3,7 +3,7 @@ import axios from 'axios'
 
 // CREATE Blog
 // Creates a blog
-export const createBlog = (blogInfo, user) => {
+export const createBlog = (blog, user) => {
   return axios({
     method: 'POST',
     url: `${apiUrl}/blogs`,
@@ -12,28 +12,26 @@ export const createBlog = (blogInfo, user) => {
     },
     data: {
       blog: {
-        blogtitle: blogInfo.blogtitle,
-        blogsubject: blogInfo.blogsubject,
-        date: blogInfo.date,
-        blogtext: blogInfo.blogtext
+        title: blog.title,
+        subject: blog.subject,
+        date: blog.date,
+        text: blog.text
       }
     }
   })
 }
 
-export const blogIndex = user => {
+export const blogIndex = () => {
   return axios({
     url: `${apiUrl}/blogs`,
-    method: 'GET',
-    headers: {
-      'Authorization': `Token token=${user.token}`
-    }
+    method: 'GET'
   })
 }
 
 // GET Blog
 // Show a single blog
 export const blogShow = (blogId, user) => {
+  console.log(blogId, user)
   return axios({
     url: `${apiUrl}/blogs/${blogId}`,
     method: 'GET',
@@ -57,19 +55,20 @@ export const blogDelete = (blogId, user) => {
 
 // UPDATE Blog
 // Updates a single blog
-export const blogUpdate = (blogInfo, user) => {
+export const blogUpdate = (blog, blogId, user) => {
+  console.log(blog)
   return axios({
-    url: `${apiUrl}/blogs/${blogInfo._id}`,
+    url: `${apiUrl}/blogs/${blogId}`,
     method: 'PATCH',
     headers: {
       'Authorization': `Token token=${user.token}`
     },
     data: {
       blog: {
-        blogtitle: blogInfo.blogtitle,
-        blogsubject: blogInfo.blogsubject,
-        date: blogInfo.date,
-        blogtext: blogInfo.blogtext
+        title: blog.title,
+        subject: blog.subject,
+        date: blog.date,
+        text: blog.text
       }
     }
   })
