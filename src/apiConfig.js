@@ -1,7 +1,7 @@
 let apiUrl
 const apiUrls = {
-  production: 'https://back-project-sunshine.herokuapp.com',
-  development: 'http://localhost:4741'
+  production: 'https://django-deploy-sunshine.herokuapp.com',
+  development: 'http://localhost:8000'
 }
 
 if (window.location.hostname === 'localhost') {

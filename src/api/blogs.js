@@ -6,7 +6,7 @@ import axios from 'axios'
 export const createBlog = (blog, user) => {
   return axios({
     method: 'POST',
-    url: `${apiUrl}/blogs`,
+    url: `${apiUrl}/blogs/`,
     headers: {
       'Authorization': `Token token=${user.token}`
     },
@@ -23,7 +23,7 @@ export const createBlog = (blog, user) => {
 
 export const blogIndex = () => {
   return axios({
-    url: `${apiUrl}/blogs`,
+    url: `${apiUrl}/blogs/`,
     method: 'GET'
   })
 }

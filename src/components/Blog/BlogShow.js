@@ -57,7 +57,7 @@ class BlogShow extends Component {
       return <Redirect to="/blog-index" />
     } else {
       // console.log(this.state.blog, user)
-      if (this.state.blog.owner === user._id) {
+      if (this.state.blog.owner === user.id) {
         return (
           <div>
             <h1>Here is a blog you own</h1>
@@ -67,7 +67,7 @@ class BlogShow extends Component {
           </div>
           /* <div className="row">
             {this.state.blog.map(blog => (
-              <div key={blog._id} className='col-sm-5 col-md-5 mx-auto mt-5'>
+              <div key={blog.id} className='col-sm-5 col-md-5 mx-auto mt-5'>
                 <Card>
                   <Card.Header as="h5">{blog.title}</Card.Header>
                   <Card.Body>
