@@ -3,7 +3,7 @@ import axios from 'axios'
 
 // CREATE Blog
 // Creates a blog
-export const createBlog = (user, blog) => {
+export const createBlog = (blog, user) => {
   return axios({
     method: 'POST',
     url: `${apiUrl}/blogs/`,
