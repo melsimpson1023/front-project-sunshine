@@ -10,14 +10,7 @@ export const createBlog = (user, blog) => {
     headers: {
       Authorization: `Token ${user.token}`
     },
-    data: {
-      blog: {
-        title: blog.title,
-        subject: blog.subject,
-        date: blog.date,
-        text: blog.text
-      }
-    }
+    data: { blog }
   })
 }
 
@@ -28,7 +21,7 @@ export const blogIndex = () => {
   })
 }
 
-// GET Blog
+// GET SHOW
 // Show a single blog
 export const blogShow = (user, blogId) => {
   // console.log(blogId, user)
@@ -63,13 +56,6 @@ export const blogUpdate = (user, blog, blogId) => {
     headers: {
       'Authorization': `Token ${user.token}`
     },
-    data: {
-      blog: {
-        title: blog.title,
-        subject: blog.subject,
-        date: blog.date,
-        text: blog.text
-      }
-    }
+    data: { blog }
   })
 }

@@ -15,7 +15,7 @@ class BlogIndex extends Component {
   componentDidMount () {
     const { user, msgAlert } = this.props
 
-    blogIndex(user)
+    blogIndex(user, this.state.blog)
       .then(res => {
         // console.log(res)
         this.setState({ blog: res.data.blog })
@@ -37,16 +37,10 @@ class BlogIndex extends Component {
   }
 
   render () {
-    if (!this.state.blog) {
-      return (
-        'Loading...'
-      )
-    } else if (this.state.blog.length === 0) {
-      return <p>No blogs exist in the database.</p>
-    } else {
+    const blogs = this.state.blogs.map(blog => (
+
       return (
         <div className="row">
-          {this.state.blog.map(blog => (
             <div key={blog.id} className='col-sm-5 col-md-5 mx-auto mt-5'>
               <Card>
                 <Card.Header as="h5">{blog.title}</Card.Header>
@@ -60,7 +54,9 @@ class BlogIndex extends Component {
           ))}
         </div>
       )
+      )
     }
   }
 }
+
 export default BlogIndex

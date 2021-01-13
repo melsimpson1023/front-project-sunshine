@@ -32,7 +32,7 @@ class BlogCreate extends Component {
 
     const { user, msgAlert } = this.props
 
-    createBlog(this.state.blog, user)
+    createBlog(user, this.state.blog)
       .then(() => {
         msgAlert({
           heading: 'Blog Create Success',
