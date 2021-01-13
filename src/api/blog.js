@@ -8,7 +8,7 @@ export const createBlog = (user, blog) => {
     method: 'POST',
     url: `${apiUrl}/blogs/`,
     headers: {
-      'Authorization': `Token token=${user.token}`
+      Authorization: `Token ${user.token}`
     },
     data: {
       blog: {
@@ -36,7 +36,7 @@ export const blogShow = (user, blogId) => {
     url: `${apiUrl}/blogs/${blogId}`,
     method: 'GET',
     headers: {
-      'Authorization': `Token token=${user.token}`
+      'Authorization': `Token ${user.token}`
     }
   })
 }
@@ -48,7 +48,7 @@ export const blogDelete = (user, blogId) => {
     url: `${apiUrl}/blogs/${blogId}`,
     method: 'DELETE',
     headers: {
-      'Authorization': `Token token=${user.token}`
+      'Authorization': `Token ${user.token}`
     }
   })
 }
@@ -61,7 +61,7 @@ export const blogUpdate = (user, blog, blogId) => {
     url: `${apiUrl}/blogs/${blogId}`,
     method: 'PATCH',
     headers: {
-      'Authorization': `Token token=${user.token}`
+      'Authorization': `Token ${user.token}`
     },
     data: {
       blog: {
