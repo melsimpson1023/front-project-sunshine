@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import messages from '../AutoDismissAlert/messages'
-import { createBlog } from '../../api/blogs'
+import { createBlog } from '../../api/blog'
 import { withRouter } from 'react-router-dom'
 
 import Form from 'react-bootstrap/Form'

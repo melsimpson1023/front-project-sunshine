@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import messages from '../AutoDismissAlert/messages'
 import { Button } from 'react-bootstrap'
-import { blogUpdate } from '../../api/blogs'
+import { blogUpdate } from '../../api/blog'
 import { withRouter } from 'react-router-dom'
 
 import Form from 'react-bootstrap/Form'

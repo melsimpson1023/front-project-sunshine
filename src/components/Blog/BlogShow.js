@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Button } from 'react-bootstrap'
 import { Redirect, Link } from 'react-router-dom'
 
-import { blogShow, blogDelete } from '../../api/blogs'
+import { blogShow, blogDelete } from '../../api/blog'
 
 class BlogShow extends Component {
   constructor () {

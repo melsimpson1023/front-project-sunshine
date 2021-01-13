@@ -3,10 +3,10 @@ import axios from 'axios'
 
 // CREATE Blog
 // Creates a blog
-export const createBlog = (blog, user) => {
+export const createBlog = (user, blog) => {
   return axios({
     method: 'POST',
-    url: `${apiUrl}/blog/`,
+    url: `${apiUrl}/blogs/`,
     headers: {
       'Authorization': `Token token=${user.token}`
     },
@@ -23,17 +23,17 @@ export const createBlog = (blog, user) => {
 
 export const blogIndex = () => {
   return axios({
-    url: `${apiUrl}/blog/`,
+    url: `${apiUrl}/blogs/`,
     method: 'GET'
   })
 }
 
 // GET Blog
 // Show a single blog
-export const blogShow = (blogId, user) => {
+export const blogShow = (user, blogId) => {
   // console.log(blogId, user)
   return axios({
-    url: `${apiUrl}/blog/${blogId}`,
+    url: `${apiUrl}/blogs/${blogId}`,
     method: 'GET',
     headers: {
       'Authorization': `Token token=${user.token}`
@@ -43,9 +43,9 @@ export const blogShow = (blogId, user) => {
 
 // DELETE Blog
 // Deletes a single blog
-export const blogDelete = (blogId, user) => {
+export const blogDelete = (user, blogId) => {
   return axios({
-    url: `${apiUrl}/blog/${blogId}`,
+    url: `${apiUrl}/blogs/${blogId}`,
     method: 'DELETE',
     headers: {
       'Authorization': `Token token=${user.token}`
@@ -55,10 +55,10 @@ export const blogDelete = (blogId, user) => {
 
 // UPDATE Blog
 // Updates a single blog
-export const blogUpdate = (blog, blogId, user) => {
+export const blogUpdate = (user, blog, blogId) => {
   // console.log(blog)
   return axios({
-    url: `${apiUrl}/blog/${blogId}`,
+    url: `${apiUrl}/blogs/${blogId}`,
     method: 'PATCH',
     headers: {
       'Authorization': `Token token=${user.token}`
