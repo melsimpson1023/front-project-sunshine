@@ -5,20 +5,21 @@ import { Card } from 'react-bootstrap'
 import { blogIndex } from '../../api/blog'
 
 class BlogIndex extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
-      blog: null
+      blogs: []
     }
   }
 
   componentDidMount () {
     const { user, msgAlert } = this.props
 
-    blogIndex(user, this.state.blog)
+    blogIndex(user)
       .then(res => {
+        console.log(res)
         // console.log(res)
-        this.setState({ blog: res.data.blog })
+        this.setState({ blogs: res.data.blogs })
       })
       .then(() => {
         msgAlert({
@@ -38,24 +39,22 @@ class BlogIndex extends Component {
 
   render () {
     const blogs = this.state.blogs.map(blog => (
-
-      return (
-        <div className="row">
-            <div key={blog.id} className='col-sm-5 col-md-5 mx-auto mt-5'>
-              <Card>
-                <Card.Header as="h5">{blog.title}</Card.Header>
-                <Card.Body>
-                  <Card.Title as="h5">{blog.subject}</Card.Title>
-                  <Card.Text>{blog.text}</Card.Text>
-                  <Card.Link href={`#/blog-show/${blog.id}`}>Show Blog</Card.Link>
-                </Card.Body>
-              </Card>
-            </div>
-          ))}
-        </div>
-      )
-      )
-    }
+      <div key={blog.id} className='col-sm-5 col-md-5 mx-auto mt-5'>
+        <Card>
+          <Card.Header as="h5">{blog.title}</Card.Header>
+          <Card.Body>
+            <Card.Title as="h5">{blog.subject}</Card.Title>
+            <Card.Text>{blog.text}</Card.Text>
+            <Card.Link href={`#/blog-show/${blog.id}`}>Show Blog</Card.Link>
+          </Card.Body>
+        </Card>
+      </div>
+    ))
+    return (
+      <div className="row">
+        {blogs}
+      </div>
+    )
   }
 }
 
