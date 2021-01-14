@@ -17,7 +17,7 @@ class BlogIndex extends Component {
 
     blogIndex(user)
       .then(res => {
-        console.log(res)
+        console.log(res.data.blogs)
         // console.log(res)
         this.setState({ blogs: res.data.blogs })
       })

@@ -5,8 +5,8 @@ import { Redirect, Link } from 'react-router-dom'
 import { blogShow, blogDelete } from '../../api/blog'
 
 class BlogShow extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       blog: null,
       deleted: false
@@ -17,7 +17,7 @@ class BlogShow extends Component {
     const { user, msgAlert, match } = this.props
     // console.log(match)
 
-    blogShow(match.params.blogId, user)
+    blogShow(match.params, user)
       .then(res => {
         // console.log(res)
         this.setState({ blog: res.data.blog })
@@ -40,7 +40,7 @@ class BlogShow extends Component {
   delete = () => {
     const { user, match } = this.props
     // console.log(match.params)
-    blogDelete(match.params.blogId, user)
+    blogDelete(match.params, user)
       .then(() => this.setState({
         deleted: true
       }))
@@ -48,24 +48,25 @@ class BlogShow extends Component {
   }
 
   render () {
+    const { blog, deleted } = this.state
     const { user } = this.props
-    if (!this.state.blog) {
+    if (!blog) {
       return (
         'Loading...'
       )
-    } else if (this.state.deleted) {
+    } if (deleted) {
       return <Redirect to="/blog-index" />
-    } else {
-      // console.log(this.state.blog, user)
-      if (this.state.blog.owner === user.id) {
-        return (
-          <div>
-            <h1>Here is a blog you own</h1>
-            <Link to={`/blog-update/${this.props.match.params.blogId}`}><Button>Edit</Button></Link>
+    }
+    // console.log(this.state.blog, user)
+    if (blog.owner === user.id) {
+      return (
+        <div>
+          <h1>Here is a blog you own</h1>
+          <Link to={`/blog-update/${this.props.match.params.blogId}`}><Button>Edit</Button></Link>
 
-            <Button onClick={this.delete}>Delete</Button>
-          </div>
-          /* <div className="row">
+          <Button onClick={this.delete}>Delete</Button>
+        </div>
+      /* <div className="row">
             {this.state.blog.map(blog => (
               <div key={blog.id} className='col-sm-5 col-md-5 mx-auto mt-5'>
                 <Card>
@@ -79,13 +80,13 @@ class BlogShow extends Component {
               </div>
             ))}
         /*  </div> */
-        )
-      } else {
-        return (
-          <h1>you do not own this blog</h1>
-        )
-      }
+      )
+    } else {
+      return (
+        <h1>you do not own this blog</h1>
+      )
     }
   }
 }
+
 export default BlogShow
