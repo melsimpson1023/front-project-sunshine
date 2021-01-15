@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import messages from '../AutoDismissAlert/messages'
 import { Button } from 'react-bootstrap'
-import { blogUpdate } from '../../api/blogs'
+import { blogUpdate } from '../../api/blog'
 import { withRouter } from 'react-router-dom'
 
 import Form from 'react-bootstrap/Form'
@@ -24,6 +24,7 @@ class BlogUpdate extends Component {
     const updatedField = { [event.target.name]: event.target.value }
 
     const editedBlog = Object.assign(this.state.blog, updatedField)
+    console.log(this.state.blog)
 
     this.setState({ blog: editedBlog })
   }
@@ -33,7 +34,7 @@ class BlogUpdate extends Component {
 
     const { user, msgAlert } = this.props
 
-    blogUpdate(this.state.blog, this.props.match.params.blogId, user)
+    blogUpdate(user, this.state.blog, this.props.match.params.blogId)
       .then(() => {
         msgAlert({
           heading: 'Blog Update Success',
