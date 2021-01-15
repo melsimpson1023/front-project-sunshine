@@ -8,17 +8,27 @@ import Form from 'react-bootstrap/Form'
 // import Button from 'react-bootstrap/Button'
 
 class BlogUpdate extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
     this.state = {
       blog: {
         title: '',
         subject: '',
         date: '',
         text: ''
-      }
-    }
+    },
   }
+  // componentDidMount (res) {
+  //  const { user, match } = this.props
+  // console.log(this.props)
+  //   blogShow(match.params, user)
+  //    .then(res => {
+  // console.log(res.data)
+  //    this.setState({ blog: res.data.blog })
+  //    })
+  // .then(res => this.setState({ listing: res.data.listing }))
+  //      .catch(console.error)
+  //  }
 
   handleChange = event => {
     const updatedField = { [event.target.name]: event.target.value }
@@ -31,9 +41,10 @@ class BlogUpdate extends Component {
   handleSubmit = event => {
     event.preventDefault()
 
-    const { user, msgAlert } = this.props
+    //  const { blog } = this.state
+    const { user, msgAlert, match } = this.props
 
-    blogUpdate(this.state.blog, this.props.match.params.blogId, user)
+    blogUpdate(user, match.params.blogId)
       .then(() => {
         msgAlert({
           heading: 'Blog Update Success',

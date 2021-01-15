@@ -8,7 +8,7 @@ class BlogShow extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      blog: null,
+      blog: [],
       deleted: false
     }
   }
@@ -17,7 +17,7 @@ class BlogShow extends Component {
     const { user, msgAlert, match } = this.props
     // console.log(match)
 
-    blogShow(match.params, user)
+    blogShow(user, match.params.blogId)
       .then(res => {
         // console.log(res)
         this.setState({ blog: res.data.blog })

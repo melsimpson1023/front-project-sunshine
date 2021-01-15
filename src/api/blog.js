@@ -56,6 +56,8 @@ export const blogUpdate = (user, blog, blogId) => {
     headers: {
       'Authorization': `Token ${user.token}`
     },
-    data: { blog }
+    data: {
+      blog: blog
+    }
   })
 }
