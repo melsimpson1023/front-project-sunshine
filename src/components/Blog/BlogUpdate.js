@@ -16,7 +16,8 @@ class BlogUpdate extends Component {
         subject: '',
         date: '',
         text: ''
-      }
+      },
+      updated: false
     }
   }
 

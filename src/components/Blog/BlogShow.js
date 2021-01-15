@@ -40,7 +40,7 @@ class BlogShow extends Component {
   delete = () => {
     const { user, match } = this.props
     // console.log(match.params)
-    blogDelete(match.params, user)
+    blogDelete(user, match.params.blogId)
       .then(() => this.setState({
         deleted: true
       }))

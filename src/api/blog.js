@@ -38,7 +38,7 @@ export const blogShow = (user, blogId) => {
 // Deletes a single blog
 export const blogDelete = (user, blogId) => {
   return axios({
-    url: `${apiUrl}/blogs/${blogId}`,
+    url: `${apiUrl}/blogs/${blogId}/`,
     method: 'DELETE',
     headers: {
       'Authorization': `Token ${user.token}`
@@ -51,7 +51,7 @@ export const blogDelete = (user, blogId) => {
 export const blogUpdate = (user, blog, blogId) => {
   // console.log(blog)
   return axios({
-    url: `${apiUrl}/blogs/${blogId}`,
+    url: `${apiUrl}/blogs/${blogId}/`,
     method: 'PATCH',
     headers: {
       'Authorization': `Token ${user.token}`
