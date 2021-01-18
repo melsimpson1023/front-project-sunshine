@@ -51,9 +51,6 @@ const Video = () => {
         <br></br>
         <h4>IF... You can Dream, But not Make Dreams Your Master - Rudyard Kipling</h4>
         <Link to={'/video6/'}><Button>Watch Video</Button></Link>
-        <br></br>
-        <h4>LIGHT UP THE DARKNESS - Motivational Video</h4>
-        <Link to={'/video7/'}><Button>Watch Video</Button></Link>
 
       </div>
     </div>
