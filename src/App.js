@@ -12,6 +12,7 @@ import ChangePassword from './components/ChangePassword/ChangePassword'
 import Home from './components/Home/Home'
 import About from './components/About/About'
 import Video from './components/Video/Video'
+import Video1 from './components/Video/Video1'
 import Article from './components/Article/Article'
 import Blog from './components/Blog/Blog'
 import BlogCreate from './components/Blog/BlogCreate'
@@ -108,6 +109,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/video' render={() => (
             <Video msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/video1' render={() => (
+            <Video1 msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/article' render={() => (
             <Article msgAlert={this.msgAlert} user={user} />
