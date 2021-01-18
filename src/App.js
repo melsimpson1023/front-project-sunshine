@@ -18,6 +18,7 @@ import Video3 from './components/Video/Video3'
 import Video4 from './components/Video/Video4'
 import Video5 from './components/Video/Video5'
 import Video6 from './components/Video/Video6'
+import Video7 from './components/Video/Video7'
 import Article from './components/Article/Article'
 import Blog from './components/Blog/Blog'
 import BlogCreate from './components/Blog/BlogCreate'
@@ -132,6 +133,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/video6' render={() => (
             <Video6 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/video7' render={() => (
+            <Video7 msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/article' render={() => (
             <Article msgAlert={this.msgAlert} user={user} />
