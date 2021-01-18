@@ -6,7 +6,7 @@ import '../../index.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
 // import YouTubePlayer from 'react-player/lib/players/YouTube'
 
-const Video1 = () => {
+const Video5 = () => {
   // const backgroundImageUrl = ('../../public/images/shutterstock_1101884330.jpg')
   const videoStyles = {
     // Center the heading inside the container
@@ -33,11 +33,11 @@ const Video1 = () => {
         <h3>We hope you enjoy your journey to the light that shines within ALL of us. May this portal help you to become a better YOU.</h3>
         <p></p>
         <p></p>
-        <ReactPlayer url='https://www.youtube.com/watch?v=7zqZoPwDIw8&list=PLhkEzHNMglDT6Xdt0YTN2QE_lLtZ_bY4_&index=83' />
+        <ReactPlayer url='https://www.youtube.com/watch?v=QNrKuABT4Kk&list=PLhkEzHNMglDT6Xdt0YTN2QE_lLtZ_bY4_&index=7' />
         <br></br>
         <Link to={'/video/'}><Button>Return to Videos</Button></Link>
       </div>
     </div>
   )
 }
-export default Video1
+export default Video5

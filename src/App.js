@@ -13,6 +13,11 @@ import Home from './components/Home/Home'
 import About from './components/About/About'
 import Video from './components/Video/Video'
 import Video1 from './components/Video/Video1'
+import Video2 from './components/Video/Video2'
+import Video3 from './components/Video/Video3'
+import Video4 from './components/Video/Video4'
+import Video5 from './components/Video/Video5'
+import Video6 from './components/Video/Video6'
 import Article from './components/Article/Article'
 import Blog from './components/Blog/Blog'
 import BlogCreate from './components/Blog/BlogCreate'
@@ -112,6 +117,21 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/video1' render={() => (
             <Video1 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/video2' render={() => (
+            <Video2 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/video3' render={() => (
+            <Video3 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/video4' render={() => (
+            <Video4 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/video5' render={() => (
+            <Video5 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/video6' render={() => (
+            <Video6 msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/article' render={() => (
             <Article msgAlert={this.msgAlert} user={user} />

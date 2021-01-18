@@ -34,10 +34,24 @@ const Video = () => {
         <p></p>
         <h4><i>A pessimist sees the difficulty in every opportunity; an optimist sees the opportunity in every difficulty. -Winston Churchill</i></h4>
         <br></br>
-        <h4>Lone Survivor Into - Navy Seals training</h4>
+        <h4>LIGHT UP THE DARKNESS - Motivational Video</h4>
         <Link to={'/video1/'}><Button>Watch Video</Button></Link>
         <br></br>
-        {/* <ReactPlayer url='https://www.youtube.com/watch?v=KwgxNAdK_RQ&list=PLhkEzHNMglDT6Xdt0YTN2QE_lLtZ_bY4_&index=19' />} */}
+        <h4>If You Want to Change the World, Start Off by Making Your Bed - William McRaven, US Navy Admiral</h4>
+        <Link to={'/video2/'}><Button>Watch Video</Button></Link>
+        <br></br>
+        <h4>Life Is Not FAIR | Mathew McConaughey | Let us Become Successful</h4>
+        <Link to={'/video3/'}><Button>Watch Video</Button></Link>
+        <br></br>
+        <h4>WATCH THIS EVERYDAY AND CHANGE YOUR LIFE - Denzel Washington Motivational Speech 2020</h4>
+        <Link to={'/video4/'}><Button>Watch Video</Button></Link>
+        <br></br>
+        <h4>The Most Eye Opening 10 Minutes Of Your Life | David Goggins</h4>
+        <Link to={'/video5/'}><Button>Watch Video</Button></Link>
+        <br></br>
+        <h4>IF... You can Dream, But not Make Dreams Your Master - Rudyard Kipling</h4>
+        <Link to={'/video6/'}><Button>Watch Video</Button></Link>
+
       </div>
     </div>
   )
