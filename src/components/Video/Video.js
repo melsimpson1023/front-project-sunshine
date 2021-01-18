@@ -34,8 +34,8 @@ const Video = () => {
         <p></p>
         <h4><i>A pessimist sees the difficulty in every opportunity; an optimist sees the opportunity in every difficulty. -Winston Churchill</i></h4>
         <br></br>
-        <h4>Lone Survivor Intro - Navy Seals training</h4>
-        <Link to={'/video1/'}><Button>Watch Video</Button></Link>
+        <h4>LIGHT UP THE DARKNESS - Motivational Video</h4>
+        <Link to={'/video7/'}><Button>Watch Video</Button></Link>
         <br></br>
         <h4>If You Want to Change the World, Start Off by Making Your Bed - William McRaven, US Navy Admiral</h4>
         <Link to={'/video2/'}><Button>Watch Video</Button></Link>
