@@ -18,6 +18,15 @@ import Video3 from './components/Video/Video3'
 import Video4 from './components/Video/Video4'
 import Video5 from './components/Video/Video5'
 import Video6 from './components/Video/Video6'
+import Motivation from './components/Motivation/Motivation'
+import Motivation1 from './components/Motivation/Motivation1'
+import Motivation2 from './components/Motivation/Motivation2'
+import Motivation3 from './components/Motivation/Motivation3'
+import Motivation4 from './components/Motivation/Motivation4'
+import Motivation5 from './components/Motivation/Motivation5'
+import Motivation6 from './components/Motivation/Motivation6'
+import Motivation7 from './components/Motivation/Motivation7'
+
 // import Video7 from './components/Video/Video7'
 import Article from './components/Article/Article'
 import Blog from './components/Blog/Blog'
@@ -133,6 +142,30 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/video6' render={() => (
             <Video6 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/motivation' render={() => (
+            <Motivation msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/motivation1' render={() => (
+            <Motivation1 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/motivation2' render={() => (
+            <Motivation2 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/motivation3' render={() => (
+            <Motivation3 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/motivation4' render={() => (
+            <Motivation4 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/motivation5' render={() => (
+            <Motivation5 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/motivation6' render={() => (
+            <Motivation6 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/motivation7' render={() => (
+            <Motivation7 msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/article' render={() => (
             <Article msgAlert={this.msgAlert} user={user} />

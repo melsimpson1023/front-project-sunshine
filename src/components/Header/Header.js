@@ -9,7 +9,10 @@ const authenticatedOptions = (
       <NavDropdown.Item href="#blog-index">View Blogs</NavDropdown.Item>
       <NavDropdown.Item href="#blogcreate">Create a Blog</NavDropdown.Item>
     </NavDropdown>
-    <Nav.Link href="#video">Videos</Nav.Link>
+    <NavDropdown title="Videos" className="collapsible-nav-dropdown">
+      <NavDropdown.Item href="#motivation">Motivation Videos</NavDropdown.Item>
+      <NavDropdown.Item href="#video">Videos</NavDropdown.Item>
+    </NavDropdown>
     <Nav.Link href="#article">Articles</Nav.Link>
     <NavDropdown title="Settings" className="collapsible-nav-dropdown">
       <NavDropdown.Item href="#change-password">Change Password</NavDropdown.Item>
