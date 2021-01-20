@@ -11,20 +11,17 @@ import SignOut from './components/SignOut/SignOut'
 import ChangePassword from './components/ChangePassword/ChangePassword'
 import Home from './components/Home/Home'
 import About from './components/About/About'
-// import Video from './components/Video/Video'
-// import Video7 from './components/Video/Video7'
-// import Video2 from './components/Video/Video2'
-// import Video3 from './components/Video/Video3'
-// import Video4 from './components/Video/Video4'
-// import Video5 from './components/Video/Video5'
-// import Video6 from './components/Video/Video6'
-import Motivation from './components/Motivation/Motivation'
-import Motivation1 from './components/Motivation/Motivation1'
-import Motivation2 from './components/Motivation/Motivation2'
-import Motivation3 from './components/Motivation/Motivation3'
-import Motivation4 from './components/Motivation/Motivation4'
-import Motivation5 from './components/Motivation/Motivation5'
-import Motivation6 from './components/Motivation/Motivation6'
+import IfYouCanDream from './components/Motivation/IfYouCanDream/IfYouCanDream'
+import LightUpTheDarkness from './components/Motivation/LightUpTheDarkness/LightUpTheDarkness'
+import IfYouWantToChangeTheWorld from './components/Motivation/IfYouWantToChangeTheWorld/IfYouWantToChangeTheWorld'
+import WatchThisEveryday from './components/Motivation/WatchThisEveryday/WatchThisEveryday'
+// import Motivation from './components/Motivation/Motivation'
+// import Motivation1 from './components/Motivation/Motivation1'
+// import Motivation2 from './components/Motivation/Motivation2'
+// import Motivation3 from './components/Motivation/Motivation3'
+import LifeIsNotFair from './components/Motivation/LifeIsNotFair/LifeIsNotFair'
+import TheMostEyeOpening from './components/Motivation/TheMostEyeOpening/TheMostEyeOpening'
+import LoneSurvivor from './components/Motivation/LoneSurvivor/LoneSurvivor'
 import Motivation7 from './components/Motivation/Motivation7'
 import Motivation8 from './components/Motivation/Motivation8'
 
@@ -123,26 +120,26 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/blog-index' render={() => (
             <BlogIndex msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/motivation' render={() => (
-            <Motivation msgAlert={this.msgAlert} user={user} />
+          <AuthenticatedRoute user={user} path='/lightupthedarkness' render={() => (
+            <LightUpTheDarkness msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/motivation1' render={() => (
-            <Motivation1 msgAlert={this.msgAlert} user={user} />
+          <AuthenticatedRoute user={user} path='/ifyoucandream' render={() => (
+            <IfYouCanDream msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/motivation2' render={() => (
-            <Motivation2 msgAlert={this.msgAlert} user={user} />
+          <AuthenticatedRoute user={user} path='/ifyouwanttochangetheworld' render={() => (
+            <IfYouWantToChangeTheWorld msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/motivation3' render={() => (
-            <Motivation3 msgAlert={this.msgAlert} user={user} />
+          <AuthenticatedRoute user={user} path='/watchthiseveryday' render={() => (
+            <WatchThisEveryday msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/motivation4' render={() => (
-            <Motivation4 msgAlert={this.msgAlert} user={user} />
+          <AuthenticatedRoute user={user} path='/lifeisnotfair' render={() => (
+            <LifeIsNotFair msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/motivation5' render={() => (
-            <Motivation5 msgAlert={this.msgAlert} user={user} />
+          <AuthenticatedRoute user={user} path='/themosteyeopening' render={() => (
+            <TheMostEyeOpening msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/motivation6' render={() => (
-            <Motivation6 msgAlert={this.msgAlert} user={user} />
+          <AuthenticatedRoute user={user} path='/lonesurvivor' render={() => (
+            <LoneSurvivor msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/motivation7' render={() => (
             <Motivation7 msgAlert={this.msgAlert} user={user} />

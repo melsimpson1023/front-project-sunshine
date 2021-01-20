@@ -9,8 +9,14 @@ const authenticatedOptions = (
       <NavDropdown.Item href="#blog-index">View Blogs</NavDropdown.Item>
       <NavDropdown.Item href="#blogcreate">Create a Blog</NavDropdown.Item>
     </NavDropdown>
-    <NavDropdown title="Videos" className="collapsible-nav-dropdown">
-      <NavDropdown.Item href="#motivation">Motivation Videos</NavDropdown.Item>
+    <NavDropdown title="Motivational Videos" className="collapsible-nav-dropdown">
+      <NavDropdown.Item href="#lightupthedarkness">Light Up The Darkness</NavDropdown.Item>
+      <NavDropdown.Item href="#ifyoucandream">IF... You can Dream</NavDropdown.Item>
+      <NavDropdown.Item href="#ifyouwanttochangetheworld">If You Want To Change The World</NavDropdown.Item>
+      <NavDropdown.Item href="#watchthiseveryday">Watch This Everyday</NavDropdown.Item>
+      <NavDropdown.Item href="#lifeisnotfair">Life Is Not Fair</NavDropdown.Item>
+      <NavDropdown.Item href="#themosteyeopening">The Most Eye Opening 10 Minutes Of Your Life</NavDropdown.Item>
+      <NavDropdown.Item href="#lonesurvivor">Lone Survivor Intro - Navy Seals training</NavDropdown.Item>
       <NavDropdown.Item href="#video">Videos</NavDropdown.Item>
     </NavDropdown>
     <Nav.Link href="#article">Articles</Nav.Link>
