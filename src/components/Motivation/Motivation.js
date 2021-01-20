@@ -52,6 +52,9 @@ const Motivation = () => {
         <br></br>
         <h4>Lone Survivor Intro - Navy Seals training</h4>
         <Link to={'/motivation7/'}><Button>Watch Video</Button></Link>
+        <h4>LIGHT UP THE DARKNESS - Motivational Video</h4>
+        <Link to={'/motivation8/'}><Button>Watch Video</Button></Link>
+        <br></br>
 
       </div>
     </div>

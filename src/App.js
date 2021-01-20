@@ -26,6 +26,7 @@ import Motivation4 from './components/Motivation/Motivation4'
 import Motivation5 from './components/Motivation/Motivation5'
 import Motivation6 from './components/Motivation/Motivation6'
 import Motivation7 from './components/Motivation/Motivation7'
+import Motivation8 from './components/Motivation/Motivation8'
 
 // import Video7 from './components/Video/Video7'
 import Article from './components/Article/Article'
@@ -145,6 +146,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/motivation7' render={() => (
             <Motivation7 msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/motivation8' render={() => (
+            <Motivation8 msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/article' render={() => (
             <Article msgAlert={this.msgAlert} user={user} />
