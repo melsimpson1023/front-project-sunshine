@@ -1,8 +1,15 @@
 {
   "main.css": "static/css/main.3560a92b.css",
   "main.css.map": "static/css/main.3560a92b.css.map",
-  "main.js": "static/js/main.553e45d4.js",
-  "main.js.map": "static/js/main.553e45d4.js.map",
+  "main.js": "static/js/main.3c964d58.js",
+  "main.js.map": "static/js/main.3c964d58.js.map",
+  "static/media/IfYouCanDream.mp4": "static/media/IfYouCanDream.67f970ca.mp4",
+  "static/media/IfYouWantToChangeTheWorld.mp4": "static/media/IfYouWantToChangeTheWorld.eff12def.mp4",
+  "static/media/LifeIsNotFair.mp4": "static/media/LifeIsNotFair.81412e1c.mp4",
+  "static/media/LightUpTheDarkness.mp4": "static/media/LightUpTheDarkness.537afcfa.mp4",
+  "static/media/LoneSurvivor.mp4": "static/media/LoneSurvivor.2076d69d.mp4",
   "static/media/PlayfairDisplay-Bold.ttf": "static/media/PlayfairDisplay-Bold.07b76bcd.ttf",
-  "static/media/PlayfairDisplay-Regular.ttf": "static/media/PlayfairDisplay-Regular.60202546.ttf"
+  "static/media/PlayfairDisplay-Regular.ttf": "static/media/PlayfairDisplay-Regular.60202546.ttf",
+  "static/media/TheMostEyeOpening.mp4": "static/media/TheMostEyeOpening.8aa40617.mp4",
+  "static/media/WatchThisEveryday.mp4": "static/media/WatchThisEveryday.27abbd66.mp4"
 }
