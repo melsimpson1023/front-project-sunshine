@@ -22,8 +22,8 @@ import WatchThisEveryday from './components/Motivation/WatchThisEveryday/WatchTh
 import LifeIsNotFair from './components/Motivation/LifeIsNotFair/LifeIsNotFair'
 import TheMostEyeOpening from './components/Motivation/TheMostEyeOpening/TheMostEyeOpening'
 import LoneSurvivor from './components/Motivation/LoneSurvivor/LoneSurvivor'
-import Motivation7 from './components/Motivation/Motivation7'
-import Motivation8 from './components/Motivation/Motivation8'
+// import Motivation7 from './components/Motivation/Motivation7'
+// import Motivation8 from './components/Motivation/Motivation8'
 
 // import Video7 from './components/Video/Video7'
 import Article from './components/Article/Article'
@@ -140,12 +140,6 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/lonesurvivor' render={() => (
             <LoneSurvivor msgAlert={this.msgAlert} user={user} />
-          )} />
-          <AuthenticatedRoute user={user} path='/motivation7' render={() => (
-            <Motivation7 msgAlert={this.msgAlert} user={user} />
-          )} />
-          <AuthenticatedRoute user={user} path='/motivation8' render={() => (
-            <Motivation8 msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/article' render={() => (
             <Article msgAlert={this.msgAlert} user={user} />
