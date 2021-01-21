@@ -12,7 +12,7 @@ import Video from './IfYouWantToChangeTheWorld.mp4'
 
 const IfYouWantToChangeTheWorld = () => (
   <div>
-    <link rel="stylesheet" href="/css/video-react.css" />
+    <link rel="stylesheet" href="/scss/video-react.scss" />
     <Player
       playsInline
       src={Video}
