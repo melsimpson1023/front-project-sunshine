@@ -12,7 +12,7 @@ import Video from './WatchThisEveryday.mp4'
 
 const WatchThisEveryday = () => (
   <div>
-    <link rel="stylesheet" href="/css/video-react.css" />
+    <link rel="stylesheet" href="/scss/video-react.scss" />
     <Player
       playsInline
       src={Video}

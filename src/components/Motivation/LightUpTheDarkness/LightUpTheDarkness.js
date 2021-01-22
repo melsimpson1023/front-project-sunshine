@@ -12,7 +12,7 @@ import Video from './LightUpTheDarkness.mp4'
 
 const LightUpTheDarkness = () => (
   <div>
-    <link rel="stylesheet" href="/css/video-react.css" />
+    <link rel="stylesheet" href="/scss/video-react.scss" />
     <Player
       playsInline
       src={Video}

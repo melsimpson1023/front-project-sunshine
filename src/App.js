@@ -23,7 +23,7 @@ import LifeIsNotFair from './components/Motivation/LifeIsNotFair/LifeIsNotFair'
 import TheMostEyeOpening from './components/Motivation/TheMostEyeOpening/TheMostEyeOpening'
 import LoneSurvivor from './components/Motivation/LoneSurvivor/LoneSurvivor'
 import PositiveThinkingCanChangeOurLife from './components/Article/PositiveThinkingCanChangeOurLife/PositiveThinkingCanChangeOurLife'
-import Motivation8 from './components/Motivation/Motivation8'
+// import Motivation8 from './components/Motivation/Motivation8'
 
 // import Video7 from './components/Video/Video7'
 import Article from './components/Article/Article'
@@ -143,9 +143,6 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/positivethinkingcanchangeourlife' render={() => (
             <PositiveThinkingCanChangeOurLife msgAlert={this.msgAlert} user={user} />
-          )} />
-          <AuthenticatedRoute user={user} path='/motivation8' render={() => (
-            <Motivation8 msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/article' render={() => (
             <Article msgAlert={this.msgAlert} user={user} />
