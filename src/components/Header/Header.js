@@ -17,9 +17,7 @@ const authenticatedOptions = (
       <NavDropdown.Item href="#lifeisnotfair">Life Is Not Fair</NavDropdown.Item>
       <NavDropdown.Item href="#themosteyeopening">The Most Eye Opening 10 Minutes Of Your Life</NavDropdown.Item>
       <NavDropdown.Item href="#lonesurvivor">Lone Survivor Intro - Navy Seals training</NavDropdown.Item>
-      <NavDropdown.Item href="#video">Videos</NavDropdown.Item>
     </NavDropdown>
-    <Nav.Link href="#article">Articles</Nav.Link>
     <NavDropdown title="Settings" className="collapsible-nav-dropdown">
       <NavDropdown.Item href="#change-password">Change Password</NavDropdown.Item>
     </NavDropdown>
