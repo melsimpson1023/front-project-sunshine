@@ -1,28 +1,27 @@
 import React from 'react'
 import '../../index.scss'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './Home.scss'
 
 const Home = () => {
-  // const backgroundImageUrl = ('/images/shutterstock_1101884330.jpg')
-  // const homeStyles = {
-  //   // Center the heading inside the container
-  //   display: 'flex',
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   // set the background image
-  //   backgroundImage: `url(${backgroundImageUrl})`,
-  //   // cover the entire width of the div
-  //   backgroundSize: 'cover',
-  //   // center the background
-  //   backgroundPosition: 'center',
-  //   // take up 100% of the viewport's height
-  //   height: '100vh',
-  //   color: '#196666',
-  //   textAlign: 'center'
-  // }
+  const homeStyles = {
+    // Center the heading inside the container
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    // set the background image
+    //  backgroundImage: `url(${backgroundImageUrl})`,
+    // cover the entire width of the div
+    backgroundSize: 'cover',
+    // center the background
+    backgroundPosition: 'center',
+    // take up 100% of the viewport's height
+    height: '100vh',
+    color: '#196666',
+    textAlign: 'center',
+    backgroundImage: 'url(\'../../public/images/shutterstock_1101884330.jpg\')'
+  }
   return (
-    <div className='homeStyles'>
+    <div style={homeStyles}>
       <div>
         <h1><b>Lux</b></h1>
         <h2>Welcome to a New World of Possiblities</h2>

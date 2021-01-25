@@ -1,19 +1,18 @@
 @import '~bootstrap/scss/bootstrap';
 
 .homeStyles {
-// background-image: url('../../public/images/shutterstock_1101884330.jpg');
-
-  // Center the heading inside the container
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // set the background image
-  // cover the entire width of the div
-  background-size: cover;
-  // center the background
-  background-position: center;
-  // take up 100% of the viewports height
-  height: 100vh;
-  color: #196666;
-  text-align: center;
+    background-image: url('../../public/images/shutterstock_1101884330.jpg');
+//   // Center the heading inside the container
+//   // display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   // set the background image
+//   // cover the entire width of the div
+    background-size: cover;
+//   // center the background
+//   // background-position: center;
+//   // take up 100% of the viewports height
+//   // height: 100vh;
+   color: #196666;
+//   text-align: center;
 }
