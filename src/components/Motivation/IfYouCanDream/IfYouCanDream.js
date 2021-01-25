@@ -18,7 +18,7 @@ const IfYouCanDream = () => (
       src={Video}
     />
     <div>
-      <p className="Title">
+      <p>
       IF... You can Dream, But not Make Dreams Your Master - Rudyard Kipling
       </p>
     </div>
