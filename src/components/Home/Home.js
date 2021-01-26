@@ -18,7 +18,7 @@ const Home = () => {
     height: '100vh',
     color: '#196666',
     textAlign: 'center',
-    backgroundImage: 'url(\'../public/images/shutterstock_1101884330.jpg\')'
+    backgroundImage: 'url(\'../../ImagesVideos/Sunlight/shutterstock_1101884330.jpg\')'
   }
   return (
     <div style={homeStyles}>
