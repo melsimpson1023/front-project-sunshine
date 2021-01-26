@@ -22,7 +22,7 @@ const authenticatedOptions = (
     <NavDropdown title="Settings" className="collapsible-nav-dropdown Home">
       <NavDropdown.Item href="#change-password" className="Color">Change Password</NavDropdown.Item>
     </NavDropdown>
-    <Nav.Link href="#sign-out" claasName="Color">Sign Out</Nav.Link>
+    <Nav.Link href="#sign-out" className="Color">Sign Out</Nav.Link>
   </Fragment>
 )
 
